@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos List</title>
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+  </head>
+  <body>
+    <h1>Wooo</h1>
+
+    <ul>
+      {{ range .Todos }}
+
+      <li>{{.Message}}</li>
+
+      {{end}}
+    </ul>
+
+    <form action="" method="get">
+      <label htmlFor="message"> Message </label>
+      <input
+        type="text"
+        id="message"
+        name="message"
+        placeholder="placeholder"
+      />
+
+      <button type="submit">Create</button>
+    </form>
+  </body>
+</html>
